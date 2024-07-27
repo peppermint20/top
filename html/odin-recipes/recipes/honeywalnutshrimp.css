@@ -1,0 +1,21 @@
+.container {
+  width: 1980px;
+}
+
+li {
+  width: 300px;
+  margin: 0 auto;
+}
+.ingredients,
+.steps {
+  font-size: 30px;
+}
+
+.ingredients {
+  font-size: 40px;
+  color: paleturquoise;
+}
+
+.steps {
+  color: plum;
+}

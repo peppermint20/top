@@ -1,0 +1,103 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.header,
+.title-content,
+.images-section,
+.motivational-message,
+.call-to-action,
+.footer {
+  background: lightblue;
+  color: white;
+  height: 72px;
+  display: flex;
+  padding: 16px;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header > .left-links > li > a {
+  color: #f9faf8;
+  font-size: 24px;
+}
+
+.title-content {
+  background: pink;
+  height: 100px;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.images-section {
+  border: solid;
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: space-evenly;
+}
+.image-section-class {
+  height: 300px;
+  border: solid;
+}
+.container {
+  border: solid;
+  max-width: 300px;
+}
+
+.title-image {
+  width: 300px;
+  display: flex;
+  height: auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  display: flex;
+}
+.header ul {
+  list-style: none;
+}
+
+.big-title {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.motivational-message {
+  background-color: #e5e7eb;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+  font-size: 32px;
+}
+
+.quote-author {
+  text-align: end;
+  font-size: 24px;
+}

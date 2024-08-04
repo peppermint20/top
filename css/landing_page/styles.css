@@ -1,7 +1,6 @@
 body {
   font-family: Roboto, sans-serif;
   margin: 0px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +16,6 @@ a {
 .motivational-message,
 .call-to-action,
 .footer {
-  background: lightblue;
   color: white;
   height: 72px;
   display: flex;
@@ -27,6 +25,11 @@ a {
 .header {
   align-items: center;
   justify-content: space-around;
+  background-color: #1f2937;
+}
+
+.footer {
+  background-color: #1f2937;
 }
 
 .header > .left-links > li > a {
@@ -35,27 +38,65 @@ a {
 }
 
 .title-content {
-  background: pink;
+  background-color: #1f2937;
   height: 100px;
+  padding: 100px;
   display: flex;
   flex: 1;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
-.images-section {
+.title-container {
+  max-width: 400px;
+}
+.title-subtext {
+  padding: 10px 0px;
+}
+.title-image {
+  border-radius: 25px;
   border: solid;
+  min-width: 400px;
+  min-height: 200px;
+}
+
+.images-section {
+  border: solid blue;
   display: flex;
-  flex: 1 0 100%;
+  flex: 1;
   justify-content: space-evenly;
+  flex-direction: column;
 }
 .image-section-class {
-  height: 300px;
-  border: solid;
+  min-height: 200px;
+  min-width: 200px;
+  border: solid blue;
+  color: red;
 }
+
+.images-container {
+  min-height: 300px;
+  min-width: 300px;
+  border: solid red;
+}
+.images-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: red;
+  padding: 32px 0px;
+}
+
+.images-subtext {
+  color: red;
+}
+
 .container {
   border: solid;
-  max-width: 300px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .title-image {
@@ -93,11 +134,51 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 32px 0;
+  padding: 120px 0;
   font-size: 32px;
+  flex-direction: column;
 }
 
+.quote {
+  max-width: 800px;
+  font-size: 36px;
+  font-weight: lighter;
+  font-style: italic;
+}
 .quote-author {
   text-align: end;
   font-size: 24px;
+  font-weight: 800;
+}
+
+.call-to-action {
+  justify-content: center;
+  align-items: center;
+  margin: 96px;
+}
+.container-cta {
+  min-width: 600px;
+  max-height: 300px;
+  display: flex;
+  border: solid red;
+  background-color: #3882f6;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+.cta-subtext {
+}
+
+.cta-button {
+  background-color: #3882f6;
+  color: white;
+  border-radius: 12px;
+  padding: 0px 24px;
+  border: 2px solid white;
+}
+
+.footer {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }

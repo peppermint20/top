@@ -4,48 +4,48 @@ let COLUMN_SIZE = 4;
 const body = document.querySelector("body");
 const button = document.createElement("button");
 
-button.textContent = "Click me";
+button.textContent = "Change Dimensions";
 button.style.alignSelf = "center";
 button.addEventListener("click", () => {
-  let row = +prompt("Enter Row Size");
-  let column = +prompt("Enter Column Size");
+  let row = +prompt("Enter Row Size lower than 100");
+  let column = +prompt("Enter Column Size lower than 100");
   ROW_SIZE = row;
   COLUMN_SIZE = column;
-  while (boxContainer.firstChild) {
-    boxContainer.removeChild(boxContainer.firstChild);
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
   }
   drawGrid();
 });
 
 body.appendChild(button);
-
-const boxContainer = document.createElement("div");
-boxContainer.style.display = "flex";
-boxContainer.style.flexDirection = "column";
-boxContainer.style.padding = "15px";
-boxContainer.style.justifyContent = "center";
-
-body.appendChild(boxContainer);
-
+let container = document.createElement("div");
+container.classList.add("container");
+body.appendChild(container);
 drawGrid();
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 function drawGrid() {
+  let dimensions = container.offsetWidth;
+  let flexbasis = (dimensions / ROW_SIZE).toString() + "px";
+  console.log();
   for (let i = 0; i < ROW_SIZE; ++i) {
-    let container = document.createElement("div");
-    container.classList.add("container");
-    container.style.flex = "1";
+    let row = document.createElement("div");
+    row.classList.add("row");
+
     for (let j = 0; j < COLUMN_SIZE; ++j) {
       let div = document.createElement("div");
       div.classList.add("grids");
-      div.style.border = "1px solid blue";
-      div.style.padding = "5px";
-
+      div.style.flexBasis = flexbasis;
+      div.style.opacity = "1";
       // Event handling
       div.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "red";
+        event.target.style.backgroundColor = `rgb(${getRandomInt(255)},${getRandomInt(255)},${getRandomInt(255)})`;
+        div.style.opacity = div.style.opacity - 0.1;
         console.log(`event.target: ${event.target.style}`);
       });
-      container.appendChild(div);
+      row.appendChild(div);
     }
-    boxContainer.appendChild(container);
+    container.appendChild(row);
   }
 }

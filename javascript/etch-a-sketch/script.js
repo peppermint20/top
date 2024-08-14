@@ -26,8 +26,8 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 function drawGrid() {
-  let dimensions = container.offsetWidth;
-  let flexbasis = (dimensions / ROW_SIZE).toString() + "px";
+  // let dimensions = container.offsetWidth;
+  // let flexbasis = (dimensions / ROW_SIZE).toString() + "px";
   console.log();
   for (let i = 0; i < ROW_SIZE; ++i) {
     let row = document.createElement("div");
@@ -36,7 +36,7 @@ function drawGrid() {
     for (let j = 0; j < COLUMN_SIZE; ++j) {
       let div = document.createElement("div");
       div.classList.add("grids");
-      div.style.flexBasis = flexbasis;
+      //div.style.flexBasis = flexbasis;
       div.style.opacity = "1";
       // Event handling
       div.addEventListener("mouseover", (event) => {

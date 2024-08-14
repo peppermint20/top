@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 480px;
+  height: 480px;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.btn {
+  border: 1px solid blue;
+  flex: 1;
+}
